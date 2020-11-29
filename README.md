@@ -8,12 +8,12 @@ demo link:
 
 ## Inspiration
 
-Our team consists of 3 developers and all of us realised that we face the same problem- it's very hard to memorise all syntaxes since each language has its own different syntax. This not only causes confusion but also takes up a lot of our time.
+Our team consists of 2 developers and both of us realised that we face the same problem- it's very hard to memorise all syntaxes since each language has its own different syntax. This not only causes confusion but also takes up a lot of our time.
 
 
 ## What it does
 
-So Many Languages has various features to motivate students to learn competitive coding while also making the process easier.
+Softwre linguistics has various features to motivate students to learn competitive coding while also making the process easier.
 SML helps:
 
 1) Save time
@@ -34,7 +34,7 @@ SML helps:
 ## How to run
 
 ```
-1) git clone https://github.com/akshatvg/So-Many-Languages
+1) git clone https://github.com/Anandsure/software-linguistics
 2) pip install -r requirements.txt
 3) python3 run.py
 ```
@@ -96,7 +96,7 @@ We built the assistive educative technology using:
 
 ## Challenges we ran into
 
-Other than the jet lag we still have from travelling all the way from India and hence lack of sleep, we came across a few technical challenges too. Creating algorithms to convert PHP code wasn't very easy at first, but we managed to pull it off in the end.
+we came across a few technical challenges. Creating algorithms to convert PHP code wasn't very easy at first, but we managed to pull it off in the end.
 
 
 ## Accomplishments that we're proud of
