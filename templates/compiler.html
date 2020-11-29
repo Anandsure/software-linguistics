@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #file .editor.demo::after {
+            content: "";
+            background-image: none;
+        }
+        
+        #footer-demo {
+            display: none;
+        }
+        
+        .button {
+            background-color: #ED7C89;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration-style: solid;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            color: #ED7C89;
+            background-color: #FFEAD0;
+        }
+        
+        .btn2 {
+            box-shadow: 0px 1px 3px black;
+            color: #ED7C8A;
+            background-color: #FFEAD0;
+            border-radius: 5px;
+        }
+        
+        .btn2:hover {
+            background-color: #ED7C8A;
+            color: #FFEAD0;
+            box-shadow: 0px 1px 3px black;
+            border-radius: 5px;
+        }
+    </style>
+
+    <title>Voice to Code Templating</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../static/img/favicon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" defer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../static/css/convert.css">
+
+    <!--Monospace Fonts & EnlighterJS-->
+    <link href="http://fonts.googleapis.com/css?family=Cutive+Mono|Roboto+Mono:400,700,400italic,500,500italic,700italic|Ubuntu+Mono:400,700,400italic,700italic|Droid+Sans+Mono|Source+Code+Pro:400,600" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../static/EnlighterJS-2.12.0/Resources/MooTools.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/EnlighterJS-2.12.0/Build/EnlighterJS.min.css">
+    <link rel="stylesheet" href="../static/EnlighterJS-2.12.0/Resources/bootstrap/bootstrap.min.css">
+    <script type="text/javascript" src="../static/EnlighterJS-2.12.0/Build/EnlighterJS.min.js"></script>
+
+    <!-- Special Styles -->
+    <style type="text/css">
+        /* custom hover effect using specific css class */
+        
+        .EnlighterJS.myHoverClass li:hover {
+            background-color: #c0c0c0;
+        }
+    </style>
+
+    <meta name="EnlighterJS" content="Advanced javascript based syntax highlighting" data-language="javascript" data-indent="2" data-selector-block="pre" data-selector-inline="code">
+</head>
+
+<body style="background-color: #ED7C89">
+
+    <header>
+        <nav class="menu" tabindex="0">
+            <div class="smartphone-menu-trigger"></div>
+
+            <header class="logo">
+                <a href="#" class="animated lightSpeedIn"><img src="../static/img/Logo.png" /></a>
+                <h4 style="text-transform: capitalize; color: rgba(180, 119, 45, 0.877);" class="mt-3 animated rotateInDownRight"><b>Hello There!</b>
+                </h4>
+            </header>
+
+            <ul>
+                <a href="http://127.0.0.1:5000/practice" style="text-decoration: none;">
+                    <li tabindex="0" class="icon-dashboard animated rotateInDownLeft"><span class="newcol" style="color: black;">Voice to Code
+              Templating</span>
+                    </li>
+                </a>
+                <a href="http://127.0.0.1:5000" style="text-decoration: none;">
+                    <li tabindex="0" class="icon-customers animated rotateInDownLeft"><span class="newcol" style="color: black;">Converting
+              Languages</span>
+                    </li>
+                </a>
+                <a href="http://bit.ly/SoManyLanguages" style="text-decoration: none;" target="_blank">
+                    <li tabindex="0" class="animated rotateInDownLeft"><img src="../static/img/hackerearth.png" style="width: 20px; height: 20px;position: absolute; left: 14px;" class="d-inline"><span class="newcol d-inline" style="color: black;">Compete
+              and Practice</span>
+                    </li>
+                </a>
+                <a href="http://127.0.0.1:5000/shop" style="text-decoration: none;" target="_blank">
+                    <li tabindex="0" class="animated rotateInDownLeft"><img src="../static/img/shopping-cart.png" style="width: 20px; height: 20px;position: absolute; left: 14px;" class="d-inline"><span class="newcol d-inline" style="color: black;">Rewards</span>
+                    </li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3" style="display: none;"></div>
+            <div class="col-lg-6" style="margin: auto; align-items: center"><br />
+                <div class="card animated slideInLeft" style="box-shadow: 1px 2px 10px rgba(0, 0, 0, 1.15);border-radius: 6px;">
+                    <div class="card-body">
+                        <div class="row ">
+                            <img src="../static/img/Logo.png" alt="So Many Languages Compiler" style="display: block;margin-left: auto;margin-right: auto;height: 150px;width: 150px;box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.15);">
+                        </div>
+                        <br>
+                        <div class="row ">
+                            <div class="col-lg-12">
+                                <ul id="chat-responses" class="chat-messages" style="width: auto;
+                font-weight: bold;
+                font-family: Arial;
+                height: 40px;
+                padding: 10px;
+                border: 2px solid #ED7C89;
+                margin: 0;
+                color: black;" align="center">Your Command Will Be Displayed Here</ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="EnlighterJSWrapper enlighterEnlighterJSWrapper" id="chat-input">
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-12" align="center">
+                            <div class="col-lg-12" align="center">
+                                <svg class="mic animated bounceIn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewbox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" style="margin: auto; align-items: center; height: 70px;">
+                  <path
+                    d="M64.825,38.252c-1.024,0-1.853,0.83-1.853,1.853v11.119c0,7.153-5.819,12.972-12.972,12.972s-12.972-5.819-12.972-12.972  V40.105c0-1.024-0.83-1.853-1.853-1.853s-1.853,0.83-1.853,1.853v11.119c0,8.57,6.498,15.648,14.825,16.573v10.258h-6.25  c-1.024,0-1.853,0.83-1.853,1.853c0,1.024,0.83,1.853,1.853,1.853h16.207c1.024,0,1.853-0.83,1.853-1.853  c0-1.024-0.83-1.853-1.853-1.853h-6.25V67.797c8.327-0.925,14.825-8.003,14.825-16.573V40.105  C66.678,39.082,65.849,38.252,64.825,38.252z">
+                  </path>
+                  <path
+                    d="M50,61.972c5.926,0,10.748-4.822,10.748-10.748V28.987c0-5.926-4.822-10.748-10.748-10.748S39.252,23.06,39.252,28.987  v22.238C39.252,57.151,44.074,61.972,50,61.972z M42.958,28.987c0-3.883,3.159-7.042,7.042-7.042s7.042,3.159,7.042,7.042v22.238  c0,3.883-3.159,7.042-7.042,7.042s-7.042-3.159-7.042-7.042V28.987z">
+                  </path>
+                  <g>
+                    <path
+                      d="M50,95C25.187,95,5,74.813,5,50S25.187,5,50,5s45,20.187,45,45S74.813,95,50,95z M50,7.903   C26.788,7.903,7.903,26.788,7.903,50S26.788,92.097,50,92.097S92.097,73.212,92.097,50S73.212,7.903,50,7.903z">
+                    </path>
+                  </g>
+                </svg>
+                            </div>
+                            <div align="center" class="recording-status"><b>
+                  <h4 class="">Hi I am a rapid code templating engine!<br>
+                    Start by choosing your preferred language!</h4>
+                </b>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="button" class="button" value="Change Language!" onClick="location.href=location.href" style="border-radius:4px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="container mt-4">
+            <button type="button" onclick="showHide()" class="btn2 SeeMore2" data-toggle="collapse" data-target="#demo" style="outline:none;position:absolute; bottom: 10px; right:10px;">Hide Compiler</button>
+        </div>
+    </div>
+
+    <h5 align="right" style="margin: auto;
+  align-items: center;
+  padding-right: 15px;
+  text-decoration-color: #ffffff;
+  color: purple;
+  text-size-adjust: auto;
+  font-size: small;font-weight: 800;">
+        Current Languages: Python ,PHP ,C++ ,Swift </h5><br>
+    <div class="container-fluid">
+        <div class="sec-widget animated fadeInRight" onload="doo()" data-widget="9e1e25c224b32a941cccc468d284e148" id="demo"></div>
+    </div>
+    <script>
+        SEC_HTTPS = true;
+        SEC_BASE = "compilers.widgets.sphere-engine.com";
+        (function(d, s, id) {
+            SEC = window.SEC || (window.SEC = []);
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = (SEC_HTTPS ? "https" : "http") + "://" + SEC_BASE + "/static/sdk/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, "script", "sphere-engine-compilers-jssdk"));
+    </script>
+
+    <script>
+        $("#demo").off("hide.bs.collapse", function() {
+            $(".SeeMore2").innerText('Show Compiler');
+        });
+        $("#demo").on("show.bs.collapse", function() {
+            $(".SeeMore2").innerText('Hide Compiler');
+        });
+        $('.SeeMore2').click(function() {
+            var $this = $(this);
+            $this.toggleClass('SeeMore2');
+            if ($this.hasClass('SeeMore2')) {
+                $this.text('Show Compiler');
+            } else {
+                $this.text('Hide Compiler');
+            }
+        });
+    </script>
+
+    <script src="../static/js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</body>
+<script>
+    function doo() {
+        document.getElementById('footer-demo').style.opacity = "0.0";
+        document.getElementById('file .editor.demo::after').style.backgroundImage = "none";
+    }
+</script>
+
+</html>
